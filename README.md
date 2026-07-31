@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+![](./git_gol.svg)
+
 <!--
 **SpaghettiBorgar/SpaghettiBorgar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
