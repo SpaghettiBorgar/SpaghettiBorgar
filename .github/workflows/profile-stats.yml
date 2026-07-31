@@ -27,8 +27,16 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8
           path: profile/top-langs.svg
+          token: ${{ secrets.PAT }}
+
+      - name: Generate WakaTime card
+        if: false
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: wakatime
+          options: username=${{ github.repository_owner }}&layout=compact
           token: ${{ secrets.PAT }}
 
       - name: Generate pin card
@@ -38,6 +46,14 @@ jobs:
           card: pin
           options: username=stats-organization&repo=github-readme-stats
           path: profile/pin-stats-organization-github-readme-stats.svg
+          token: ${{ secrets.PAT }}
+
+      - name: Generate gist pin card
+        if: false
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: gist
+          options: id=0123456789abcdef
           token: ${{ secrets.PAT }}
 
       - name: Commit cards
